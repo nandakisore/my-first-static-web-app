@@ -3,7 +3,7 @@ function submitForm() {
 	var password = document.getElementById("password").value;
 
 	// Send a POST request to the Azure Function to store the data
-	fetch('/api/store-data', {
+	fetch('https://my-function-app.azurewebsites.net/api/storeData', {
 		method: 'POST',
 		body: JSON.stringify({ name: name, password: password }),
 		headers: {
